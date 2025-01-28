@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+
+    --background-color:;
+    --main-color:;
+    --darkness-background-color:;
+    --darkness-color:;
+
+}
+
+body, ul, li, button, h1, h2, h3, h4, h5, h6, p, a{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.header{
+    display: flex;
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    box-shadow: 3px 3px 3px #0001;
+    align-items: center;
+    justify-content: space-around;
+    font-size: clamp(12px, 30dvh, 35px);
+    padding: 10px;
+    background-color: #fff;
+}
+.icon__container{
+    width: 35px;
+    height: 35px;
+}
+.icon__container img{
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.perfil__image-container{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+.perfil__image-container img{
+    max-width: 100%;
+    width: 100%;
+    object-fit: contain;
+ 
+}
+
+/* Apartado de botones estilos del header de pinterest clone  */
+
+.button{
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+     background-color: transparent;
+}
+.button:hover, .material-symbols-outlined:hover{
+    opacity: 0.8;
+}
+.button__start{
+    background-color: black;
+    color: white;
+    border-radius: 35px;
+}
+.input__container{
+    display: flex;
+    position: relative;
+    padding: 10px;
+    align-items: center;
+    width: clamp(200px, 50%, 350px);
+}
+.header__input-search{
+    width: 100%;
+    border: none;
+    text-align: center;
+    background-color: rgb(241, 241, 241);
+    border-radius: 20px;
+    padding: 15px;
+    flex-grow: 5;
+}
+.input__search-logo{
+    position: absolute;
+    left: 0;
+    margin-left: 20px;
+    
+}
+
+
+/* MEDIA QUERIES  */
+
+@media screen and (max-width:600px){
+
+    .button__explore, .button__create{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Apartado de main, grids y publicaciones  */
+
+.main{
+    max-width: 100%;
+    width: 100%;
+
+}
+
+.main__grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, max-width(200px, auto));
+    gap: 5px;
+    
+
+}
+
+.main__grid-item{
+    border-radius: 10px;
+    height: 100%;
+    margin: 3px;
+}
+.main__grid-item img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* Media queryes del main de publicaciones  */
+
+@media screen and (min-width:600px){
+    .main__grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media screen and (min-width:900px){
+    .main__grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
